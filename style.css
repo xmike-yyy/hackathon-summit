@@ -31,11 +31,16 @@ nav {
     background-color: #003f5c; /* Dark blue, matching the nav */
     color: white;
     padding: 10px 0;
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align horizontally */
 }
 
-.budget-info p {
-    margin: 10px 0;
-}
+.budget, .nav-buttons {
+    margin: 0 10px; /* Adds horizontal margin for separation */}
+
+/* Additional styling for p, button, etc., as per your design needs */
+
 
 .company-section table {
     width: 100%;
@@ -91,3 +96,4 @@ input[type="number"] {
 .company-section table {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }
+
