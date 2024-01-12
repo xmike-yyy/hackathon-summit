@@ -82,8 +82,10 @@ const appleStock = {
     2023: 1400
   };
 
- var budget1 = document.getElementById('player1Budget');
+   var budget1 = document.getElementById('player1Budget');
   var budget2 = document.getElementById('player2Budget');
+  var finalizeButton = document.getElementById('finalizeButton')
+  var underInvest = document.getElementById('underInvest')
   var verified = false;
 
 
@@ -95,6 +97,8 @@ document.getElementById('calculateButton').addEventListener('click', function() 
   
     budget2.textContent = '$10,000'; // Or use innerHTML if you need to include HTML tags
     budget2.style.color = 'white';
+
+    underInvest.innerHTML = "";
 
     let p1 = new Array(12);
     let p2 = new Array(12);
@@ -156,20 +160,38 @@ document.getElementById('calculateButton').addEventListener('click', function() 
         budget1.style.color = 'red';
         budget2.style.color = 'red';
         verified = false;
+        finalizeButton.style.backgroundColor = 'red';
+
     } else if (totalp1 > player1Budget){
         budget1.innerHTML = 'Overbudget';
         budget1.style.color = 'red';
 
         budget2.innerHTML = 10000 - totalp2;
         verified = false;
+        finalizeButton.style.backgroundColor = 'red';
+
     } else if (totalp2 > player2Budget) {
         budget2.style.color = 'red';
         budget2.innerHTML = 'Overbudget';
 
         budget1.innerHTML = 10000 - totalp1;
+
         verified = false;
+        finalizeButton.style.backgroundColor = 'red';
+
+    } else if (totalp1 < 9500 || totalp2 < 9500) {
+        underInvest.innerHTML = 'Invest more! Make sure both Players have less than 500 remaining.';
+        underInvest.style.color = "orange"
+        verified = false;
+        finalizeButton.style.backgroundColor = 'orange';
+
+        budget1.innerHTML = 10000 - totalp1;
+        budget2.innerHTML = 10000 - totalp2;
+
     } else {
         verified = true;
+        finalizeButton.style.backgroundColor = 'green';
+        
 
         budget1.innerHTML = 10000 - totalp1;
         budget2.innerHTML = 10000 - totalp2;
