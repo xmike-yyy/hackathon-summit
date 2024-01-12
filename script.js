@@ -130,8 +130,8 @@ document.getElementById('calculateButton').addEventListener('click', function() 
     p1[8] = document.getElementById('player1TargetStocks').value * costcoStock['2020'];
     p2[8] = document.getElementById('player2TargetStocks').value * costcoStock['2020'];
 
-    p1[9] = document.getElementById('player1FiveGuysStocks').value * dominosStock['2020'];
-    p2[9] = document.getElementById('player2FiveGuysStocks').value * dominosStock['2020'];
+    p1[9] = document.getElementById('player1DominoesStocks').value * dominosStock['2020'];
+    p2[9] = document.getElementById('player2DominoesStocks').value * dominosStock['2020'];
 
     p1[10] = document.getElementById('player1mcDStocks').value * mcdonaldsStock['2020'];
     p2[10] = document.getElementById('player2mcDStocks').value * mcdonaldsStock['2020'];
