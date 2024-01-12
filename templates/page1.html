@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fantasy Stock League</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>Fantasy Stock League</h1>
+    </nav>
+
+    <div class="budget-info">
+        <div class="budget">
+            <p>Player 1 Budget: <span id="player1Budget">{{ player1_budget }}</span></p>
+            <p>Player 2 Budget: <span id="player2Budget">{{ player2_budget }}</span></p>
+        </div>   
+        <div class="nav-buttons">
+            <button id="learnButton" onclick="window.location='/learn'">Learn</button>
+            <button id="aboutUsButton" onclick="window.location='/about_us'">About Us</button>
+            <button id="aboutUsButton" onclick="window.location='/visualization'">Visualization</button>
+
+        </div>
+        <p id="underInvest"></p>
+    </div>  
+    
+
+<div class="company-section">
+    <table>
+        <thead>
+            <tr>
+                <td>Big Tech</td>
+                <td><img src="{{ url_for('static', filename='images/logo/apple.png') }}" alt="Company Logo" class="company-logo"></td>
+                <td>Apple</td>
+
+                <td>Stock Price: $75 <span id="appleStockPrice"></span></td>
+                <td><input type="number" id="player1AppleStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2AppleStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Big Tech</td>
+                <td><img src="{{ url_for('static', filename='images/logo/google.jpg') }}" alt="Company Logo" class="company-logo"></td>
+                <td>Google</td>
+
+                <td>Stock Price: $68 <span id="googleStockPrice"></span></td>
+                <td><input type="number" id="player1GoogleStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2GoogleStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Big Tech</td>
+                <td><img src="{{ url_for('static', filename='images/logo/amazon.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>
+                <td>Amazon</td>
+
+                <td>Stock Price: $94 <span id="amazonStockPrice"></span></td>
+                <td><input type="number" id="player1AmazonStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2AmazonStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+
+            <tr>
+                <td>Bank</td>
+                <td><img src="{{ url_for('static', filename='images/logo/capitalOne.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>
+                <td>Capital One</td>
+                <td>Stock Price: $102 <span id="capitalOneStockPrice"></span></td>
+                <td><input type="number" id="player1CapitalOneStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2CapitalOneStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Bank</td>
+                <td><img src="{{ url_for('static', filename='images/logo/chase.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>JP Morgan Chase</td>
+                <td>Stock Price: $138 <span id="jpMorganStockPrice"></span></td>
+                <td><input type="number" id="player1jpMorganStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2jpMorganStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Bank</td>
+                <td><img src="{{ url_for('static', filename='images/logo/morganStanley.png') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Morgan Stanley</td>
+                <td>Stock Price: $50 <span id="morganStanleyStockPrice"></span></td>
+                <td><input type="number" id="player1MSStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2MSStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Retail</td>
+                <td><img src="{{ url_for('static', filename='images/logo/walmart.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Walmart</td>
+                <td>Stock Price: $119 <span id="walmartStockPrice"></span></td>
+                <td><input type="number" id="player1WalmartStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2WalmartStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Retail</td>
+                <td><img src="{{ url_for('static', filename='images/logo/costco.png') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Costco</td>
+                <td>Stock Price: $290 <span id="costcoStockPrice"></span></td>
+                <td><input type="number" id="player1CostcoStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2CostcoStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Retail</td>
+                <td><img src="{{ url_for('static', filename='images/logo/target.png') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Target</td>
+                <td>Stock Price: $129 <span id="targetStockPrice"></span></td>
+                <td><input type="number" id="player1TargetStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2TargetStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Fast Food</td>
+                <td><img src="{{ url_for('static', filename='images/logo/dominoes.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Dominoes</td>
+                <td>Stock Price: $290<span id="dominoesStockPrice"></span></td>
+                <td><input type="number" id="player1DominoesStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2DominoesStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Fast Food</td>
+                <td><img src="{{ url_for('static', filename='images/logo/mcDonalds.jpg') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>McDonald's</td>
+                <td>Stock Price: $198 <span id="mcDStockPrice"></span></td>
+                <td><input type="number" id="player1mcDStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2mcDStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+            <tr>
+                <td>Fast Food</td>
+                <td><img src="{{ url_for('static', filename='images/logo/chipotle.png') }}" alt="Company Logo" class="company-logo">
+                </td>                <td>Chipotle</td>
+                <td>Stock Price: $850<span id="chipotleStockPrice"></span></td>
+                <td><input type="number" id="player1ChipotleStocks" placeholder="Player 1 Stocks"></td>
+                <td><input type="number" id="player2ChipotleStocks" placeholder="Player 2 Stocks"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <button id="calculateButton">Calculate</button><br>
+    <button id="finalizeButton" onclick="window.location='/results'">Finalize</button>
+
+    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

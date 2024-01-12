@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Growth Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <header class="typewriter">Stock Growth Over The Year!!</header>
+            <button><a href="/">Home</a></button>
+
+
+<div id="priceGrowthImage">
+    <img src="https://mike-two-bucket.s3.amazonaws.com/bank.png" alt="Price Growth Image" style="width: 100%;">
+</div>
+
+<div id="volumeGrowthImage">
+    <img src="https://mike-two-bucket.s3.amazonaws.com/stock.png" alt="Volume Growth Image" style="width: 100%;">
+</div>
+
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

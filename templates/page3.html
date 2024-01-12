@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Selection and Financial Literacy App</title>
+    <style>
+      body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #003f5c; 
+    margin: 0;
+    padding: 0;
+    color: #fff; 
+}
+
+nav {
+    background-color: #01273a; 
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.learning-container, .questions-container {
+    background-color: #0056b3; 
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.questions-container{
+    background-color: #003f5c; 
+}
+
+h1, h2 {
+    font-size: 2em; 
+    margin-bottom: 0.5em;
+}
+
+p, ol, ul {
+    font-size: 1.3em; 
+    line-height: 1.5; 
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #ff6b6b; 
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+    width: auto;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+.feedback {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+a {
+    color: #ffbaba; 
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #45a049; 
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#stock-page">Stock Selection</a>
+        <a href="#financial-page">Financial Literacy</a>
+        <a href = "/" class = 'button'>Home</a>
+    </nav>
+
+    <section id="stock-page">
+        <h1 style="text-align: center;">Stock Selection App</h1>
+    </section>
+
+    <section id="financial-page">
+        <h1 style="text-align: center;">Financial Literacy Learning</h1>
+        <div class="learning-container">
+            <p>
+                Welcome to the Financial Literacy Learning page! Understanding basic financial concepts is essential for making informed decisions about your money.
+            </p>
+            <p>
+                Investing is important for several reasons, and understanding investing essentials can empower individuals to make informed financial decisions. Here are some key reasons why investing is important, along with essential principles:
+            </p>
+        
+            <ol>
+                <li><strong>Wealth Building:</strong> Investing provides an opportunity to grow wealth over time. Unlike keeping money in a savings account with relatively low interest, investing in assets such as stocks, bonds, or real estate allows your money to potentially earn higher returns, contributing to long-term wealth accumulation.</li>
+                
+                <li><strong>Inflation Hedge:</strong> Over time, the purchasing power of money tends to decrease due to inflation. Investing in assets that outpace inflation helps preserve and potentially increase the real value of your money. Stocks and real estate, for example, have historically provided returns that outpace inflation.</li>
+                
+                <li><strong>Financial Goals Achievement:</strong> Investing allows individuals to work towards and achieve various financial goals, such as buying a home, funding education, or retiring comfortably. By strategically allocating funds in different investments, you can tailor your portfolio to meet specific goals and timelines.</li>
+                
+                
+            </ol>
+
+            <p>
+                Here are some websites that can help you embark on your Fantasy Stock League Journey!
+            </p>
+                <ul>
+                <a href="https://www.nerdwallet.com/article/investing/investing-101" target="_blank">Nerdwallet investing 101</a>!</p>
+                <a href="https://www.wealthsimple.com/en-ca/learn/investing-basics" target="_blank">Wealthsimple investing 101</a>!</p>
+                <a href="https://www.nfl.com/news/how-to-play-fantasy-football-a-beginner-s-guide-0ap3000000692955 " target="_blank">NFL how to fantasy fotball</a>!</p>
+                </ul>
+            
+            
+            <p>
+                Now, let's test your knowledge with some questions below.
+            </p>
+
+            <!-- Questions Section -->
+            <div class="questions-container">
+                <p>1. <strong>Savings and Emergency Fund:</strong> What is the primary purpose of having an emergency fund?</p>
+                <input type="radio" name="q1" value="a"> a) To invest in stocks<br>
+                <input type="radio" name="q1" value="b"> b) To cover unexpected expenses<br>
+                <input type="radio" name="q1" value="c"> c) To buy luxury items<br>
+
+                <p>2. <strong>Investing:</strong> What is the potential benefit of long-term investing?</p>
+                <input type="radio" name="q2" value="a"> a) Quick returns<br>
+                <input type="radio" name="q2" value="b"> b) Diversification<br>
+                <input type="radio" name="q2" value="c"> c) Minimal risk<br>
+
+                <p>3. <strong>Credit Score:</strong> How does paying bills on time affect your credit score?</p>
+                <input type="radio" name="q3" value="a"> a) It has no impact<br>
+                <input type="radio" name="q3" value="b"> b) Improves your credit score<br>
+                <input type="radio" name="q3" value="c"> c) Lowers your credit score<br>
+
+                <p>4. <strong>Budgeting:</strong> What is a common budgeting method that allocates a percentage of income to different spending categories?</p>
+                <input type="radio" name="q4" value="a"> a) Random budgeting<br>
+                <input type="radio" name="q4" value="b"> b) Zero-based budgeting<br>
+                <input type="radio" name="q4" value="c"> c) No budgeting needed<br>
+
+                <p>5. <strong>Insurance:</strong> Which type of insurance provides coverage for damage to your own vehicle in the event of an accident?</p>
+                <input type="radio" name="q5" value="a"> a) Health insurance<br>
+                <input type="radio" name="q5" value="b"> b) Home insurance<br>
+                <input type="radio" name="q5" value="c"> c) Auto insurance<br>
+
+
+                <p>6. <strong>Debt Management:</strong> What is the recommended debt-to-income ratio for maintaining healthy finances?</p>
+                <input type="radio" name="q1" value="a"> a) Less than 10%<br>
+                <input type="radio" name="q1" value="b"> b) 20% to 30%<br>
+                <input type="radio" name="q1" value="c"> c) 36% or less<br>
+
+                <p>7. <strong>Retirement Planning:</strong> At what age can individuals typically start withdrawing funds from their Individual Retirement Account (IRA) without penalty?</p>
+                <input type="radio" name="q2" value="a"> a) 55<br>
+                <input type="radio" name="q2" value="b"> b) 59 1/2<br>
+                <input type="radio" name="q2" value="c"> c) 65<br>
+
+                <p>8. <strong>Real Estate:</strong> What is a common advantage of homeownership in terms of building wealth?</p>
+                <input type="radio" name="q4" value="a"> a) Monthly rent payments<br>
+                <input type="radio" name="q4" value="b"> b) Potential for property value appreciation<br>
+                <input type="radio" name="q4" value="c"> c) Limited maintenance responsibilities<br>
+
+                <p>9. <strong>Budgeting:</strong>What is budgeting?</p>
+                <input type="radio" name="q1" value="a"> a) Saving money<br>
+                <input type="radio" name="q1" value="b"> b) Creating a plan to spend money<br>
+                <input type="radio" name="q1" value="c"> c) Investing in stocks<br>
+
+                <p>10. <strong>Retirement Planning:</strong> What is a common retirement savings vehicle that offers tax advantages?</p>
+                <input type="radio" name="q10" value="a"> a) Traditional IRA<br>
+                <input type="radio" name="q10" value="b"> b) Savings account<br>
+                <input type="radio" name="q10" value="c"> c) Certificate of deposit<br>
+
+                <button onclick="checkAnswers()">Submit Answers</button>
+            </div>
+
+            <!-- Feedback Section -->
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </section>
+
+    <script>
+        function checkAnswers() {
+            var answers = document.querySelectorAll('input[type="radio"]:checked');
+            var correctAnswers = ["b", "b", "b", "c", "b", "c", "b", "b", "b", "a"];
+            var userAnswers = [];
+
+            for (var i = 0; i < answers.length; i++) {
+                userAnswers.push(answers[i].value);
+            }
+
+            var allCorrect = true;
+
+            for (var i = 0; i < correctAnswers.length; i++) {
+                if (correctAnswers[i] !== userAnswers[i]) {
+                    allCorrect = false;
+                    break;
+                }
+            }
+
+            var feedbackElement = document.getElementById("feedback");
+
+            if (allCorrect) {
+                feedbackElement.innerHTML = "Great job! You answered all questions correctly.";
+            } else {
+                feedbackElement.innerHTML = "Oops! Some of your answers are incorrect. Please review the reading and try again.";
+            }
+        }
+    </script>
+
+</body>
+</html>

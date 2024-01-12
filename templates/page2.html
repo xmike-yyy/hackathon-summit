@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Selection App</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+#winnerHeading {
+    text-align: center;
+    color: white;
+    background-color: #003f5c; /* Capital One Blue */
+    padding: 20px 0;
+    margin: 0; /* Remove default margin */
+}
+
+h1, h2, p {
+    color: white; /* Capital One Blue */
+}
+
+tr p{
+    color: black;
+}
+
+.player-financials {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color:#003f5c
+}
+
+.player-balance {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.player-balance h2 {
+    margin-top: 0;
+    color: white;
+
+}
+
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stock-table th, .stock-table td {
+    border: 1px solid #003f5c;
+    padding: 10px;
+    text-align: left;
+}
+
+.stock-table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+.stock-table td img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+.performance-section {
+    padding: 20px 0;
+}
+
+.performance {
+    background-color: #e3f2fd;
+    border: 2px solid #0056b3;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ff6b6b; /* Accent red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin : 20px;
+    align-items:center;
+    justify-content:center;
+}
+
+button:hover {
+    background-color: #003f5c; /* Darker red on hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stock Performance App</title>
+    </head>
+    <body>
+        <h1 id="winnerHeading">Winner: </h1>
+    
+        <div class="player-financials">
+            <div class="player-balance">
+                <h2>Player One</h2>
+                <p>Balance: <span id="playerOneBalance">$0</span></p>
+                <p>Profit: <span id="playerOneProfit">$0</span></p>
+            </div>
+            <div class="player-balance">
+                <h2>Player Two</h2>
+                <p>Balance: <span id="playerTwoBalance">$0</span></p>
+                <p>Profit: <span id="playerTwoProfit">$0</span></p>
+            </div>
+        </div>
+    
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Logo</th>
+                    <th>Player One Profit</th>
+                    <th>Player Two Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Row (Repeat for each company) -->
+                <tr>
+                    <td>Apple</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/apple.png') }}" alt="Apple Logo"></td>
+                    <td><p id = 'apple1'></p></td>
+                    <td><p id = 'apple2'></p></td>
+                </tr>
+                <tr>
+                    <td>Google</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/google.jpg') }}" alt="Google Logo"></td>
+                    <td><p id = 'google1'></p></td>
+                    <td><p id = 'google2'></p></td>
+                </tr>
+                <tr>
+                    <td>Amazon</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/amazon.jpg') }}" alt="Amazon Logo"></td>
+                    <td><p id = 'amazon1'></p></td>
+                    <td><p id = 'amazon2'></p></td>
+                </tr>
+                <tr>
+                    <td>Capital One</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/capitalOne.jpg') }}" alt="CapitalOne Logo"></td>
+                    <td><p id = 'capitalone1'></p></td>
+                    <td><p id = 'capitalone2'></p></td>
+                </tr>
+                <tr>
+                    <td>JP Morgan Chase</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/chase.jpg') }}" alt="Chase Logo"></td>
+                    <td><p id = 'chase1'></p></td>
+                    <td><p id = 'chase2'></p></td>
+                </tr>
+                <tr>
+                    <td>Morgan Stanley</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/morganStanley.png') }}" alt="MorganStanley Logo"></td>
+                    <td><p id = 'morganStanley1'></p></td>
+                    <td><p id = 'morganStanley2'></p></td>
+                </tr>
+                <tr>
+                    <td>Walmart</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/walmart.jpg') }}" alt="Walmart Logo"></td>
+                    <td><p id = 'walmart1'></p></td>
+                    <td><p id = 'walmart2'></p></td>
+                </tr>
+                <tr>
+                    <td>Costco</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/costco.png') }}" alt="CostCo Logo"></td>
+                    <td><p id = 'costco1'></p></td>
+                    <td><p id = 'costco2'></p></td>
+                </tr>
+                <tr>
+                    <td>Target</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/target.png') }}" alt="Target Logo"></td>
+                    <td><p id = 'target1'></p></td>
+                    <td><p id = 'target2'></p></td>
+                </tr>
+                <tr>
+                    <td>Dominoes</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/Dominoes.jpg') }}" alt="Dominoes Logo"></td>
+                    <td><p id = 'fiveGuys1'></p></td>
+                    <td><p id = 'fiveGuys2'></p></td>
+                </tr>
+                <tr>
+                    <td>McDonalds</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/mcDonalds.jpg') }}" alt="McDonald's Logo"></td>
+                    <td><p id = 'mcDonalds1'></p></td>
+                    <td><p id = 'mcDonalds2'></p></td>
+                </tr>
+                <tr>
+                    <td>Chipotle</td>
+                    <td><img src="{{ url_for('static', filename='images/logo/chipotle.png') }}" alt="Chipotle Logo"></td>
+                    <td><p id = 'chipotle1'></p></td>
+                    <td><p id = 'chipotle2'></p></td>
+                </tr>
+                <!-- Add rows for other companies -->
+            </tbody>
+        </table>
+    
+        <button id="learnButton" onclick="window.location='/learn'">Learn</button>
+    
+    </body>
+    </html>
+    
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <script defer>
+
+
+        function navigateHome(){
+            window.location.href = "page1.html"
+        }
+
+
+        const p1f = JSON.parse(localStorage.getItem('p1f'));
+        const p2f = JSON.parse(localStorage.getItem('p2f'));
+
+        const apple1 = document.getElementById('apple1');
+        const apple2 = document.getElementById('apple2');
+        
+        apple1.innerHTML = p1f[0];
+        apple2.innerHTML = p2f[0];
+
+
+        const p1bal = document.getElementById("playerOneBalance");
+        const p2bal = document.getElementById("playerTwoBalance");
+
+        const p1profit = document.getElementById("playerOneProfit");
+        const p2profit = document.getElementById("playerTwoProfit");
+
+        const winner = document.getElementById("winnerHeading");
+
+        // Update Google Profits
+        const google1 = document.getElementById('google1');
+        const google2 = document.getElementById('google2');
+        google1.innerHTML = p1f[1];
+        google2.innerHTML = p2f[1];
+
+        // Update Amazon Profits
+        const amazon1 = document.getElementById('amazon1');
+        const amazon2 = document.getElementById('amazon2');
+        amazon1.innerHTML = p1f[2];
+        amazon2.innerHTML = p2f[2];
+
+        // Update Capital One Profits
+        const capitalone1 = document.getElementById('capitalone1');
+        const capitalone2 = document.getElementById('capitalone2');
+        capitalone1.innerHTML = p1f[3];
+        capitalone2.innerHTML = p2f[3];
+
+        // Update JP Morgan Chase Profits
+        const chase1 = document.getElementById('chase1');
+        const chase2 = document.getElementById('chase2');
+        chase1.innerHTML = p1f[4];
+        chase2.innerHTML = p2f[4];
+
+        // Update Morgan Stanley Profits
+        const morganStanley1 = document.getElementById('morganStanley1');
+        const morganStanley2 = document.getElementById('morganStanley2');
+        morganStanley1.innerHTML = p1f[5];
+        morganStanley2.innerHTML = p2f[5];
+
+        // Update Walmart Profits
+        const walmart1 = document.getElementById('walmart1');
+        const walmart2 = document.getElementById('walmart2');
+        walmart1.innerHTML = p1f[6];
+        walmart2.innerHTML = p2f[6];
+
+        // Update Costco Profits
+        const costco1 = document.getElementById('costco1');
+        const costco2 = document.getElementById('costco2');
+        costco1.innerHTML = p1f[7];
+        costco2.innerHTML = p2f[7];
+
+        // Update Target Profits
+        const target1 = document.getElementById('target1');
+        const target2 = document.getElementById('target2');
+        target1.innerHTML = p1f[8];
+        target2.innerHTML = p2f[8];
+
+        // Update Five Guys Profits
+        const fiveGuys1 = document.getElementById('fiveGuys1');
+        const fiveGuys2 = document.getElementById('fiveGuys2');
+        fiveGuys1.innerHTML = p1f[9];
+        fiveGuys2.innerHTML = p2f[9];
+
+        // Update McDonalds Profits
+        const mcDonalds1 = document.getElementById('mcDonalds1');
+        const mcDonalds2 = document.getElementById('mcDonalds2');
+        mcDonalds1.innerHTML = p1f[10];
+        mcDonalds2.innerHTML = p2f[10];
+
+        // Update Chipotle Profits
+        const chipotle1 = document.getElementById('chipotle1');
+        const chipotle2 = document.getElementById('chipotle2');
+        chipotle1.innerHTML = p1f[11];
+        chipotle2.innerHTML = p2f[11];
+
+        let profit1 = 0;
+        let profit2 = 0;
+
+        p1f.forEach(function(input) {
+            profit1 += input;
+        });
+
+        p2f.forEach(function(input) {
+            profit2 += input;
+        });
+
+        p1profit.innerHTML = "$ " + profit1;
+        p2profit.innerHTML = "$ " + profit2;
+
+        let final1 = 10000 + profit1;
+        let final2 = 10000 + profit2;
+
+        p1bal.innerHTML = "$ " + final1;
+        p2bal.innerHTML = "$ " + final2;
+
+        if(final1 > final2){
+            winner.innerHTML = "Player 1 Wins!"
+        } else if (final2 > final1){
+            winner.innerHTML = "Player 2 Wins!"
+        } else {
+            winner.innerHTML = "It's a Tie!"
+        }
+
+    </script>
+
+</body>
+</html>
