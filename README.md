@@ -12,3 +12,9 @@ Rules:
 For a full-scale FSL, it would mirror any prominent fantasy sports league that you would see.
 First, we would incorporate live data with an API that auto-updates the stock prices from day to day or how often we would like it to update per game mode.
 Secondly, we would have more features such as account creation, custom league creation and monetary incentives. Different game modes such as classic fantasy leagues, play off brackets, tournament head to head.
+Contributors:
+Sean Bamfo (https://www.linkedin.com/in/sean-bamfo/)
+Devon Wallerson (https://www.linkedin.com/in/devon-wallerson-166391267/)
+Sulaiman Oyekunle (https://www.linkedin.com/in/sulaiman-oyekunle/)
+Michael Sun (https://www.linkedin.com/in/michael-sun-mit/)
+For Capital One Black and Hispanic Tech Summit hackathon
