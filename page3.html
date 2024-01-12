@@ -5,86 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Selection and Financial Literacy App</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #003f5c; 
+    margin: 0;
+    padding: 0;
+    color: #fff; 
+}
 
-        nav {
-            background-color: #272af2;
-            padding: 10px;
-            text-align: center;
-        }
+nav {
+    background-color: #01273a; 
+    padding: 15px;
+    text-align: center;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-        .learning-container {
-            background-color: #b2cef5;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 20px auto;
-            text-align: left;
-        }
+.learning-container, .questions-container {
+    background-color: #0056b3; 
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 30px auto;
+    text-align: left;
+}
 
-        h1, h2, p {
-            color: #333;
-        }
+.questions-container{
+    background-color: #003f5c; 
+}
 
-        .questions-container {
-            margin-top: 20px;
-        }
+h1, h2 {
+    font-size: 2em; 
+    margin-bottom: 0.5em;
+}
 
-        input[type="radio"] {
-            margin-bottom: 10px;
-        }
+p, ol, ul {
+    font-size: 1.3em; 
+    line-height: 1.5; 
+}
 
-        button {
-            background-color: #f34949;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+input[type="radio"] {
+    margin-right: 10px;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+button {
+    background-color: #ff6b6b; 
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+    width: auto;
+    margin: 20px auto;
+}
 
-        .feedback {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
+button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+.feedback {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+a {
+    color: #ffbaba; 
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #45a049; 
+}
+
+
     </style>
 </head>
 <body>
-
     <nav>
         <a href="#stock-page">Stock Selection</a>
         <a href="#financial-page">Financial Literacy</a>
+        <a href = "page1.html">Home</a>
     </nav>
 
-    <!-- Stock Selection Page -->
     <section id="stock-page">
         <h1 style="text-align: center;">Stock Selection App</h1>
-        <!-- ... (Existing stock selection code) ... -->
     </section>
 
-    <!-- Financial Literacy Page -->
     <section id="financial-page">
         <h1 style="text-align: center;">Financial Literacy Learning</h1>
         <div class="learning-container">
