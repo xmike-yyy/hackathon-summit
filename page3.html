@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Selection and Financial Literacy App</title>
+    <style>
+        /* ... (Previous styles remain unchanged) ... */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .learning-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .questions-container {
+            margin-top: 20px;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .feedback {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#stock-page">Stock Selection</a>
+        <a href="#financial-page">Financial Literacy</a>
+    </nav>
+
+    <!-- Stock Selection Page -->
+    <section id="stock-page">
+        <h1>Stock Selection App</h1>
+        <!-- ... (Existing stock selection code) ... -->
+    </section>
+
+    <!-- Financial Literacy Page -->
+    <section id="financial-page">
+        <h1>Financial Literacy Learning</h1>
+        <div class="learning-container">
+            <p>
+                Welcome to the Financial Literacy Learning page! Understanding basic financial concepts is essential for making informed decisions about your money.
+                Let's start with a brief reading on the importance of budgeting.
+            </p>
+            <p>
+                <strong>Budgeting:</strong> Budgeting is the process of creating a plan to spend your money. It helps you prioritize your spending, track your expenses,
+                and ensure that you have enough money for both needs and wants. Budgeting is a key tool for financial success and stability.
+            </p>
+            <p>
+                Now, let's test your knowledge with some questions below.
+            </p>
+
+            <!-- Questions Section -->
+            <div class="questions-container">
+                <p>1. What is budgeting?</p>
+                <input type="radio" name="q1" value="a"> a) Saving money<br>
+                <input type="radio" name="q1" value="b"> b) Creating a plan to spend money<br>
+                <input type="radio" name="q1" value="c"> c) Investing in stocks<br>
+
+                <p>2. Why is budgeting important?</p>
+                <input type="radio" name="q2" value="a"> a) To buy luxury items<br>
+                <input type="radio" name="q2" value="b"> b) To prioritize spending and track expenses<br>
+                <input type="radio" name="q2" value="c"> c) Budgeting is not important<br>
+
+                <p>3. What does budgeting help you with?</p>
+                <input type="radio" name="q3" value="a"> a) Winning a lottery<br>
+                <input type="radio" name="q3" value="b"> b) Prioritize spending and track expenses<br>
+                <input type="radio" name="q3" value="c"> c) Eating out every day<br>
+
+                <button onclick="checkAnswers()">Submit Answers</button>
+            </div>
+
+            <!-- Feedback Section -->
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </section>
+
+    <script>
+        function checkAnswers() {
+            var answers = document.querySelectorAll('input[type="radio"]:checked');
+            var correctAnswers = ["b", "b", "b"];
+            var userAnswers = [];
+
+            for (var i = 0; i < answers.length; i++) {
+                userAnswers.push(answers[i].value);
+            }
+
+            var allCorrect = true;
+
+            for (var i = 0; i < correctAnswers.length; i++) {
+                if (correctAnswers[i] !== userAnswers[i]) {
+                    allCorrect = false;
+                    break;
+                }
+            }
+
+            var feedbackElement = document.getElementById("feedback");
+
+            if (allCorrect) {
+                feedbackElement.innerHTML = "Great job! You answered all questions correctly.";
+            } else {
+                feedbackElement.innerHTML = "Oops! Some of your answers are incorrect. Please review the reading and try again.";
+            }
+        }
+    </script>
+
+</body>
+</html>
