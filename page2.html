@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Selection App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .player-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .performance-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .performance {
+            background-color: #fff;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .performance:hover {
+            transform: scale(1.02);
+        }
+        .performance h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .performance p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+     <h1>Stock Selection App</h1>
+
+    <div class="container">
+        <!-- Player One's Stock Selection -->
+        <div class="player-container">
+            <h2>Player One</h2>
+            <label for="playerOneStock">Select Stock:</label>
+            <select id="playerOneStock">
+                <optgroup label="Big Tech">
+                    <option value="Apple">Apple</option>
+                    <option value="Google">Google</option>
+                    <option value="Amazon">Amazon</option>
+                </optgroup>
+                <optgroup label="Retail">
+                    <option value="Walmart">Walmart</option>
+                    <option value="Target">Target</option>
+                    <option value="Costco">Costco</option>
+                </optgroup>
+                <optgroup label="Fast Food">
+                    <option value="Dominos">Dominos</option>
+                    <option value="McDonald's">McDonald's</option>
+                    <option value="Chipotle">Chipotle</option>
+                </optgroup>
+                <optgroup label="Banking">
+                    <option value="Capital One">Capital One</option>
+                    <option value="JP Morgan">JP Morgan</option>
+                    <option value="Morgan Stanley">Morgan Stanley</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <!-- Player Two's Stock Selection -->
+        <div class="player-container">
+            <h2>Player Two</h2>
+            <label for="playerTwoStock">Select Stock:</label>
+            <select id="playerTwoStock">
+                <optgroup label="Big Tech">
+                    <option value="Apple">Apple</option>
+                    <option value="Google">Google</option>
+                    <option value="Amazon">Amazon</option>
+                </optgroup>
+                <optgroup label="Retail">
+                    <option value="Walmart">Walmart</option>
+                    <option value="Target">Target</option>
+                    <option value="Costco">Costco</option>
+                </optgroup>
+                <optgroup label="Fast Food">
+                    <option value="Dominos">Dominos</option>
+                    <option value="McDonald's">McDonald's</option>
+                    <option value="Chipotle">Chipotle</option>
+                </optgroup>
+                <optgroup label="Banking">
+                    <option value="Capital One">Capital One</option>
+                    <option value="JP Morgan">JP Morgan</option>
+                    <option value="Morgan Stanley">Morgan Stanley</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+
+    <!-- Button to Calculate and Display Result -->
+    <button onclick="calculateResult()">Calculate Result</button>
+
+    <!-- Display Result -->
+    <div class="result" id="result"></div>
+
+    <!-- Performance Section -->
+    <div class="performance-section">
+        <h2>Stock Performance</h2>
+        
+        <!-- Player One's Performance -->
+        <div id="playerOnePerformance" class="performance"></div>
+        
+        <!-- Player Two's Performance -->
+        <div id="playerTwoPerformance" class="performance"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            var playerOneStock = document.getElementById("playerOneStock").value;
+            var playerTwoStock = document.getElementById("playerTwoStock").value;
+
+            var playerOneROI = Math.random() * 10;
+            var playerTwoROI = Math.random() * 10;
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = `
+                <p>${playerOneStock}: ${playerOneROI.toFixed(2)}%</p>
+                <p>${playerTwoStock}: ${playerTwoROI.toFixed(2)}%</p>
+                <p>${playerOneROI > playerTwoROI ? 'Player One' : 'Player Two'} wins!</p>
+            `;
+
+            // Display stock performance breakdown
+            displayPerformance("playerOnePerformance", playerOneStock, playerOneROI);
+            displayPerformance("playerTwoPerformance", playerTwoStock, playerTwoROI);
+        }
+
+        function displayPerformance(elementId, stock, roi) {
+            var performanceElement = document.getElementById(elementId);
+            performanceElement.innerHTML = `
+                <h3>${stock} Performance</h3>
+                <p>You bought x amount of stocks from ${stock}.</p>
+                <p>This investment made you $x over the fiscal year.</p>
+                <p>Your return on investment (ROI) for ${stock}: ${roi.toFixed(2)}%</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
