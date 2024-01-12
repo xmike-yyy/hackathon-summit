@@ -3,18 +3,18 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f8f9fa; /* Light background for contrast */
+    background-color: #f8f9fa; 
 }
 
 nav {
-    background-color: #003f5c; /* Dark blue */
+    background-color: #003f5c;
     padding: 10px 0;
     color: white;
 }
 
 .nav-buttons button {
     margin-left: 20px;
-    background-color: #ff6b6b; /* Accent red */
+    background-color: #ff6b6b; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -24,22 +24,21 @@ nav {
 }
 
 .nav-buttons button:hover {
-    background-color: #ff5050; /* Darker red on hover */
+    background-color: #ff5050; 
 }
 
 .budget-info {
-    background-color: #003f5c; /* Dark blue, matching the nav */
+    background-color: #003f5c; 
     color: white;
     padding: 10px 0;
     display: flex;
-    align-items: center; /* Align vertically */
-    justify-content: center; /* Align horizontally */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .budget, .nav-buttons {
-    margin: 0 10px; /* Adds horizontal margin for separation */}
+    margin: 0 10px; 
 
-/* Additional styling for p, button, etc., as per your design needs */
 
 
 .company-section table {
@@ -53,13 +52,13 @@ nav {
 }
 
 .company-section th {
-    background-color: #0056b3; /* Blue header */
+    background-color: #0056b3; 
     color: white;
     font-weight: bold;
 }
 
 .company-section td {
-    background-color: white; /* White cells */
+    background-color: white; 
 }
 
 input[type="number"] {
@@ -73,7 +72,7 @@ input[type="number"] {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff; /* Bright blue */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -82,7 +81,7 @@ input[type="number"] {
 }
 
 #calculateButton:hover, #finalizeButton:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
 
 .company-logo {
@@ -92,8 +91,8 @@ input[type="number"] {
     margin: 0 auto;
 }
 
-/* Adding a subtle shadow to the table for depth */
 .company-section table {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }
+
 
