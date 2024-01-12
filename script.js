@@ -62,8 +62,8 @@ const appleStock = {
   };
   
   // Dominoes
-  const fiveGuysStock = {
-    name: 'Five Guys',
+  const dominosStock = {
+    name: 'Dominoes',
     2020: 290,
     2023: 346
   };
@@ -82,7 +82,7 @@ const appleStock = {
     2023: 1400
   };
 
-   var budget1 = document.getElementById('player1Budget');
+  var budget1 = document.getElementById('player1Budget');
   var budget2 = document.getElementById('player2Budget');
   var finalizeButton = document.getElementById('finalizeButton')
   var underInvest = document.getElementById('underInvest')
@@ -198,33 +198,21 @@ document.getElementById('calculateButton').addEventListener('click', function() 
     }
        
 });
-  
+
+
+
+
+
 function navigateToPage2() {
     // Use window.location to navigate to page2.html
     window.location.href = 'page2.html';
   }
 
-/*let budget = 10000;
-  const minimumInv = 1000;
-  const maximumInv = 5000;
-  const check = true
-
-  function calculateStocks() {
-    // Get the value entered in the input box
-    const player1AppleStocksInput = document.getElementById('player1AppleStocks');
-    const player1AppleStocksValue = parseInt(player1AppleStocksInput.value, 10);
-
-    // Check if the entered value is a valid number
-    if (!isNaN(player1AppleStocksValue)) {
-      // Perform the calculations
-      const investment = player1AppleStocksValue * 75; // Assuming stock price for Apple is $75
-      if (investment < minimumInv && investment < maximumInv) {
-      const remainingBudget = budget - investment;
-      }
-
-      // Check if remaining budget is within the specified range
-      if (check) {
-        // Update the budget variable
-        budget = remainingBudget;
+function navigateToLearn(){
+    window.location.href = 'page3.html';
 }
-  }}*/
+
+// Add more interactive features as needed
+
+
+// calculate button - 
