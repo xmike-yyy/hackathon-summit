@@ -118,10 +118,6 @@ button:hover {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stock Performance App</title>
-        <style>
-            /* Add your existing CSS styles here */
-            /* ... */
-        </style>
     </head>
     <body>
         <h1 id="winnerHeading">Winner: </h1>
@@ -344,6 +340,14 @@ button:hover {
 
         p1bal.innerHTML = "$ " + final1;
         p2bal.innerHTML = "$ " + final2;
+
+        if(final1 > final2){
+            winner.innerHTML = "Player 1 Wins!"
+        } else if (final2 > final1){
+            winner.innerHTML = "Player 2 Wins!"
+        } else {
+            winner.innerHTML = "It's a Tie!"
+        }
 
     </script>
 
