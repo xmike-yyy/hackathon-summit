@@ -81,4 +81,39 @@ const appleStock = {
     2020: 850,
     2023: 1400
   };
+
+document.getElementById('calculateButton').addEventListener('click', function() {
+    // Simplified JavaScript to fetch values from stock inputs
+
+    var p1Apple = document.getElementById('player1AppleStocks').value;
+    var p2Apple = document.getElementById('player2AppleStocks').value;
+    var p1Google = document.getElementById('player1GoogleStocks').value;
+    var p2Google = document.getElementById('player2GoogleStocks').value;
+    var p1Amazon = document.getElementById('player1AmazonStocks').value;
+    var p2Amazon = document.getElementById('player2AmazonStocks').value;
+
+    var p1CapitalOne = document.getElementById('player1CapitalOneStocks').value;
+    var p2CapitalOne = document.getElementById('player2CapitalOneStocks').value;
+    var p1JPMorgan = document.getElementById('player1jpMorganStocks').value;
+    var p2JPMorgan = document.getElementById('player2jpMorganStocks').value;
+    var p1MS = document.getElementById('player1MSStocks').value;
+    var p2MS = document.getElementById('player2MSStocks').value;
+
+    var p1Walmart = document.getElementById('player1WalmartStocks').value;
+    var p2Walmart = document.getElementById('player2WalmartStocks').value;
+    var p1Costco = document.getElementById('player1CostcoStocks').value;
+    var p2Costco = document.getElementById('player2CostcoStocks').value;
+    var p1Target = document.getElementById('player1TargetStocks').value;
+    var p2Target = document.getElementById('player2TargetStocks').value;
+
+    var p1FiveGuys = document.getElementById('player1FiveGuysStocks').value;
+    var p2FiveGuys = document.getElementById('player2FiveGuysStocks').value;
+    var p1McD = document.getElementById('player1mcDStocks').value;
+    var p2McD = document.getElementById('player2mcDStocks').value;
+    var p1Chipotle = document.getElementById('player1ChipotleStocks').value;
+    var p2Chipotle = document.getElementById('player2ChipotleStocks').value;
+
+    var player1Budget = 10000;
+    
+});
   
