@@ -7,17 +7,19 @@
 <body>
     <nav>
         <h1>Fantasy Stock League</h1>
-        <div class="nav-buttons">
-            <button id="homeButton">Home</button>
-            <button id="learnButton">Learn</button>
-        </div>
     </nav>
 
     <div class="budget-info">
-        <p>Player 1 Budget: <span id="player1Budget"></span></p>
-        <p>Player 2 Budget: <span id="player2Budget"></span></p>
-    </div>
-
+        <div class = "budget">
+            <p>Player 1 Budget: <span id="player1Budget">$10,000</span></p>
+            <p>Player 2 Budget: <span id="player2Budget">$10,000</span></p>
+        </div>   
+        <div class="nav-buttons">
+            <button id="learnButton">Learn</button>
+        </div>
+        <p id="underInvest"></p>
+    </div>    
+    
 
 <div class="company-section">
     <table>
@@ -134,7 +136,7 @@
 
     <button id="calculateButton">Calculate</button><br>
     <button id="finalizeButton" onclick="navigateToPage2()">Finalize</button>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
