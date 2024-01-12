@@ -16,6 +16,7 @@
         </div>   
         <div class="nav-buttons">
             <button id="learnButton" onclick="navigateToLearn()">Learn</button>
+            <button id = "aboutUs" onclick = "aboutUs()">About Us</button>
         </div>
         <p id="underInvest"></p>
     </div>    
@@ -24,16 +25,6 @@
 <div class="company-section">
     <table>
         <thead>
-            <tr>
-                <th>Logo</th>
-                <th>Category</th>
-                <th>Company</th>
-                <th>Stock Price</th>
-                <th>Player 1 Input</th>
-                <th>Player 2 Input</th>
-            </tr>
-        </thead>
-        <tbody>
             <tr>
                 <td>Big Tech</td>
                 <td><img src="logo/apple.png" alt="Company Logo" class="company-logo"></td>
@@ -110,7 +101,7 @@
                 <td>Fast Food</td>
                 <td><img src="logo/dominoes.jpg" alt="Company Logo" class="company-logo"></td>
                 <td>Dominoes</td>
-                <td>Stock Price: $290<span id="dominoes"></span></td>
+                <td>Stock Price: $290<span id="dominoesStockPrice"></span></td>
                 <td><input type="number" id="player1DominoesStocks" placeholder="Player 1 Stocks"></td>
                 <td><input type="number" id="player2DominoesStocks" placeholder="Player 2 Stocks"></td>
             </tr>
@@ -121,7 +112,7 @@
                 <td>Stock Price: $198 <span id="mcDStockPrice"></span></td>
                 <td><input type="number" id="player1mcDStocks" placeholder="Player 1 Stocks"></td>
                 <td><input type="number" id="player2mcDStocks" placeholder="Player 2 Stocks"></td>
-            </tr>   
+            </tr>
             <tr>
                 <td>Fast Food</td>
                 <td><img src="logo/chipotle.png" alt="Company Logo" class="company-logo"></td>
@@ -135,7 +126,7 @@
 </div>
 
     <button id="calculateButton">Calculate</button><br>
-    <button id="finalizeButton" onclick="navigateToPage2()">Finalize</button>
+    <button id="finalizeButton">Finalize</button>
 
     <script src="script.js"></script>
 </body>
