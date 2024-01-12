@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Selection and Financial Literacy App</title>
     <style>
-        /* ... (Previous styles remain unchanged) ... */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
         nav {
-            background-color: #333;
+            background-color: #010d52;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -18,25 +25,29 @@
             font-weight: bold;
             font-size: 16px;
         }
+
         .learning-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             text-align: left;
         }
+
+        h1, h2, p {
+            color: #333;
+        }
+
         .questions-container {
             margin-top: 20px;
         }
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
+
         input[type="radio"] {
             margin-bottom: 10px;
         }
+
         button {
             background-color: #4caf50;
             color: #fff;
@@ -47,9 +58,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         button:hover {
             background-color: #45a049;
         }
+
         .feedback {
             margin-top: 20px;
             font-size: 18px;
@@ -67,42 +80,48 @@
 
     <!-- Stock Selection Page -->
     <section id="stock-page">
-        <h1>Stock Selection App</h1>
+        <h1 style="text-align: center;">Stock Selection App</h1>
         <!-- ... (Existing stock selection code) ... -->
     </section>
 
     <!-- Financial Literacy Page -->
     <section id="financial-page">
-        <h1>Financial Literacy Learning</h1>
+        <h1 style="text-align: center;">Financial Literacy Learning</h1>
         <div class="learning-container">
             <p>
                 Welcome to the Financial Literacy Learning page! Understanding basic financial concepts is essential for making informed decisions about your money.
-                Let's start with a brief reading on the importance of budgeting.
             </p>
-            <p>
-                <strong>Budgeting:</strong> Budgeting is the process of creating a plan to spend your money. It helps you prioritize your spending, track your expenses,
-                and ensure that you have enough money for both needs and wants. Budgeting is a key tool for financial success and stability.
-            </p>
+        
             <p>
                 Now, let's test your knowledge with some questions below.
             </p>
 
             <!-- Questions Section -->
             <div class="questions-container">
-                <p>1. What is budgeting?</p>
-                <input type="radio" name="q1" value="a"> a) Saving money<br>
-                <input type="radio" name="q1" value="b"> b) Creating a plan to spend money<br>
-                <input type="radio" name="q1" value="c"> c) Investing in stocks<br>
+                <p>1. <strong>Savings and Emergency Fund:</strong> What is the primary purpose of having an emergency fund?</p>
+                <input type="radio" name="q1" value="a"> a) To invest in stocks<br>
+                <input type="radio" name="q1" value="b"> b) To cover unexpected expenses<br>
+                <input type="radio" name="q1" value="c"> c) To buy luxury items<br>
 
-                <p>2. Why is budgeting important?</p>
-                <input type="radio" name="q2" value="a"> a) To buy luxury items<br>
-                <input type="radio" name="q2" value="b"> b) To prioritize spending and track expenses<br>
-                <input type="radio" name="q2" value="c"> c) Budgeting is not important<br>
+                <p>2. <strong>Investing:</strong> What is the potential benefit of long-term investing?</p>
+                <input type="radio" name="q2" value="a"> a) Quick returns<br>
+                <input type="radio" name="q2" value="b"> b) Diversification<br>
+                <input type="radio" name="q2" value="c"> c) Minimal risk<br>
 
-                <p>3. What does budgeting help you with?</p>
-                <input type="radio" name="q3" value="a"> a) Winning a lottery<br>
-                <input type="radio" name="q3" value="b"> b) Prioritize spending and track expenses<br>
-                <input type="radio" name="q3" value="c"> c) Eating out every day<br>
+                <p>3. <strong>Credit Score:</strong> How does paying bills on time affect your credit score?</p>
+                <input type="radio" name="q3" value="a"> a) It has no impact<br>
+                <input type="radio" name="q3" value="b"> b) Improves your credit score<br>
+                <input type="radio" name="q3" value="c"> c) Lowers your credit score<br>
+
+                <p>4. <strong>Budgeting:</strong> What is a common budgeting method that allocates a percentage of income to different spending categories?</p>
+                <input type="radio" name="q4" value="a"> a) Random budgeting<br>
+                <input type="radio" name="q4" value="b"> b) Zero-based budgeting<br>
+                <input type="radio" name="q4" value="c"> c) No budgeting needed<br>
+
+                <p>5. <strong>Insurance:</strong> Which type of insurance provides coverage for damage to your own vehicle in the event of an accident?</p>
+                <input type="radio" name="q5" value="a"> a) Health insurance<br>
+                <input type="radio" name="q5" value="b"> b) Home insurance<br>
+                <input type="radio" name="q5" value="c"> c) Auto insurance<br>
 
                 <button onclick="checkAnswers()">Submit Answers</button>
             </div>
@@ -115,7 +134,7 @@
     <script>
         function checkAnswers() {
             var answers = document.querySelectorAll('input[type="radio"]:checked');
-            var correctAnswers = ["b", "b", "b"];
+            var correctAnswers = ["b", "b", "b", "c", "b"];
             var userAnswers = [];
 
             for (var i = 0; i < answers.length; i++) {
